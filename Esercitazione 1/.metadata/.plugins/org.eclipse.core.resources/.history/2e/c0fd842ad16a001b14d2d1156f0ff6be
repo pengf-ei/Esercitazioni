@@ -1,0 +1,21 @@
+
+public class Stringhe {
+	
+/*
+ * 	Scrivere un programma / metodo che data una stringa in input la stampi al contrario.
+ * 	Per esempio, se si immette la stringa "Viva Java", il programma stampa "avaJ aviV"
+ */
+	public static void funct1() {
+		String str = "Viva Java";
+		
+		System.out.print(str.charAt(0));
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		funct1();
+
+	}
+
+}

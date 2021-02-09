@@ -1,0 +1,85 @@
+import java.util.Scanner;
+
+public class Cicli {
+
+/*
+ * 	Scrivere un programma / metodo che data una sequenza di interi stampi "Tutti positivi e pari"
+ * 	se i numeri inseriti sono tutti positivi e pari, altrimenti stampa "NO".
+ * 	Risolvere questo esercizio senza usare array.
+ */
+	public static void funct1(int... interi) {
+		boolean verifica = true;
+		
+		for(int x : interi) {
+			if(!(x >=0 && (x % 2 == 0))) {
+				verifica = false;
+				break;
+			}
+		}
+		
+		if(verifica == false)
+			System.out.print("NO");
+		else
+			System.out.print("Tutti positivi e pari");
+
+	}
+	
+	
+/*
+ *	Scrivere un programma / metodo che data una sequenza di interi stampi la media di tutti
+ *	i numeri inseriti che siano divisibili per tre.
+ *	Per esempio, se si immettono i valori 5, 8, 9, 12, 7, 6 ,1
+ *	il risultato stampato dovr¨¤ essere 9. Risolvere questo esercizio senza usare array. 
+ */
+	public static void funct2(int... interi) {
+		int sum = 0;
+		int nDivisibili = 0;
+		
+		for(int n : interi) {
+			if(n % 3 == 0) {
+				nDivisibili++;
+				sum += n;
+			}
+		}
+		
+		System.out.print((float)sum/nDivisibili);
+	}
+	
+	
+/*
+ *  Scrivere un programma / metodo che chiede all¡¯utente di inserire una sequenza di caratteri
+ *  (chiedendo prima quanti caratteri voglia inserire) e li ristampa man mano che vengono inseriti.
+ *  L¡¯intero procedimento (chiedere quanti caratteri voglia inserire,
+ *  leggere i caratteri e man mano stamparli) dovr¨¤ essere ripetuto 5 volte.
+ *  Risolvere questo esercizio senza usare array.
+ */
+	public static void funct3() {
+		Scanner insert = new Scanner(System.in);
+		
+		for(int i = 0; i < 5; i++) {
+			System.out.println("Quanti caratteri vuoi inserire?");
+			int n = insert.nextInt();
+			
+			StringBuffer str = new StringBuffer(n);
+			for(int j = 0; j < n; j++) {
+				System.out.println("Inserisci carattere: ");
+				String c = insert.nextLine();
+				str.append(c.charAt(0));
+		//		System.out.print("Carattere inserito: " + c.charAt(0));
+				
+			}
+
+		}
+		insert.close();
+	}
+	
+	public static void main(String[] args) {
+		
+	//	funct1(4,6,8,10,100,120);
+	//	funct2(5,8,9,12,7,6,1,3,1,9,24);
+		
+		funct3();
+
+	}
+
+}

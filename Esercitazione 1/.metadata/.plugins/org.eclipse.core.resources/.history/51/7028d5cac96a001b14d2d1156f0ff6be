@@ -1,0 +1,57 @@
+
+public class Array {
+	
+/*	
+ * 	Scrivere un programma / metodo che preveda un array di 10 numeri interi
+ * 	contenente valori a piacere e ne stampa gli elementi secondo il seguente
+ * 	ordine: il primo, l¡¯ultimo, il secondo, il penultimo, il terzo, il terz¡¯ultimo, ecc. 
+ */
+	public static void funct1() {
+		
+		int [] interi = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		
+		int i = 0;
+		int j = interi.length - 1;
+		
+		while(i != (interi.length/2)) {
+			System.out.println(interi[i]);
+			System.out.println(interi[j] + "\n");
+			i++;
+			j--;
+
+			
+		}
+	}
+
+	
+/*
+ * 	Scrivere un programma / metodo che preveda un array di 10 numeri interi contenente valori random.
+ * 	Tale programma dovr¨¤ stampare la dicitura "Pari e dispari uguali" se la somma dei numeri
+ * 	in posizioni pari dell¡¯array ¨¨ uguale alla somma dei numeri in posizioni dispari,
+ * 	altrimenti il programma dovr¨¤ stampare la dicitura "Pari e dispari diversi".
+ */
+	public static void funct2() {
+		int[] interi = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		int sumpari = 0;
+		int sumdispari = 0;
+		
+		for(int i = 0; i < interi.length; i+=2) {
+			sumpari += interi[i];
+		}
+		
+		for(int i = 1; i < interi.length; i+=2) {
+			sumdispari += interi[i];
+		}
+		
+		System.out.println(sumdispari);
+			
+	}
+
+	public static void main(String[] args) {
+		
+		
+		funct2();
+
+	}
+
+}

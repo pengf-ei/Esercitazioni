@@ -1,0 +1,33 @@
+
+public class Cicli {
+
+/*
+ * 	Scrivere un programma / metodo che data una sequenza di interi stampi "Tutti positivi e pari"
+ * 	se i numeri inseriti sono tutti positivi e pari, altrimenti stampa "NO".
+ * 	Risolvere questo esercizio senza usare array.
+ */
+	public static void funct1(int... interi) {
+		boolean verifica = true;
+		
+		for(int x : interi) {
+			if(!(x >=0 && (x % 2 == 0))) {
+				verifica = false;
+				break;
+			}
+		}
+		
+		if(verifica == false)
+			System.out.print("NO");
+		else
+			System.out.print("Tutti positivi e pari");
+
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		funct1(1,2,3,4,5);
+
+	}
+
+}

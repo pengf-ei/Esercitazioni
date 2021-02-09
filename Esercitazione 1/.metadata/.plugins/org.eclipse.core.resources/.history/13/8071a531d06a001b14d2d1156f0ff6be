@@ -1,0 +1,118 @@
+
+public class Array {
+	
+/*	
+ * 	Scrivere un programma / metodo che preveda un array di 10 numeri interi
+ * 	contenente valori a piacere e ne stampa gli elementi secondo il seguente
+ * 	ordine: il primo, l¡¯ultimo, il secondo, il penultimo, il terzo, il terz¡¯ultimo, ecc. 
+ */
+	public static void funct1(int[] interi) {
+		
+		int i = 0;
+		int j = interi.length - 1;
+		
+		while(i != (interi.length/2)) {
+			System.out.println(interi[i]);
+			System.out.println(interi[j] + "\n");
+			i++;
+			j--;
+
+			
+		}
+	}
+
+	
+/*
+ * 	Scrivere un programma / metodo che preveda un array di 10 numeri interi contenente valori random.
+ * 	Tale programma dovr¨¤ stampare la dicitura "Pari e dispari uguali" se la somma dei numeri
+ * 	in posizioni pari dell¡¯array ¨¨ uguale alla somma dei numeri in posizioni dispari,
+ * 	altrimenti il programma dovr¨¤ stampare la dicitura "Pari e dispari diversi".
+ */
+	public static void funct2(int[] interi) {
+
+		int sumpari = 0;
+		int sumdispari = 0;
+		
+		for(int i = 0; i < interi.length; i+=2) {
+			sumpari += interi[i];
+		}
+		
+		for(int i = 1; i < interi.length; i+=2) {
+			sumdispari += interi[i];
+		}
+		
+		if(sumpari == sumdispari)
+			System.out.println("Pari e dispari uguali");
+		else
+			System.out.println("Pari e dispari diversi");
+			
+	}
+
+	
+/*
+ *  Scrivere un programma / metodo che preveda un array di 10 numeri interi contenente valori random
+ *  e che stampi la dicitura "Tre valori consecutivi uguali" contiene tre valori uguali in
+ *  tre posizioni consecutive, qualora la condizione non dovesse essere verificata 
+ *  dovr¨¤ stampare "NO". 
+ */
+	public static void funct3(int[] interi) {
+		boolean verifica = false;
+		
+		for(int i = 0; i < interi.length - 2; i++) {
+			int j = i+1;
+			int k = i+2;
+			if(interi[i] == interi[j] && interi[i] == interi[k]) {
+				verifica = true;
+				System.out.println("Tre valori consegutivi uguali");
+				break;
+			}
+		}
+	
+		if (verifica == false)
+			System.out.println("NO");
+	}
+
+	
+/*
+ *  Scrivere un programma / metodo che date due sequenze di stringhe, ciascuna di 5 elementi,
+ *  stampi il messaggio "OK" se almeno una stringa della prima sequenza compare anche nella seconda,
+ *  altrimenti sar¨¤ stampato il messaggio "KO". Qualora vengano trovate due stringhe uguali
+ *  i confronti tra le sequenze devono essere interrotti.
+ */
+	public static void funct4(String[] str1, String[] str2) {
+		boolean verifica = false;
+		
+		for(int i = 0; i < str1.length; i++) {
+			for(int j = 0; j < str2.length; j++) {
+				if(str1[i].equals(str2[j])) {
+					verifica = true;
+					System.out.println("OK");
+					break;
+				}
+					
+			}
+			if(verifica == true)
+				break;
+		}
+		
+		if(verifica == false)
+			System.out.println("KO");
+		
+	}
+	
+	public static void main(String[] args) {
+		int [] interi = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		
+		String[] str1 = {"aa", "bb", "cc", "dd", "ee"};
+		String[] str2 = {"aA", "bB", "cC", "dD", "eE"};
+		
+	//	funct1(interi);
+	//	funct2(interi);
+	//	funct3(interi);
+		
+		funct4(str1, str2);
+		
+
+	}
+
+}

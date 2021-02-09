@@ -1,0 +1,68 @@
+
+public class Stringhe {
+	
+/*
+ * 	Scrivere un programma / metodo che data una stringa in input la stampi al contrario.
+ * 	Per esempio, se si immette la stringa "Viva Java", il programma stampa "avaJ aviV"
+ */
+	public static void funct1(String str) {
+		
+		for(int i = str.length() -1; i >= 0; i--) {
+			System.out.print(str.charAt(i));
+		}
+		
+	}
+
+	
+/*
+ * 	Scrivere un programma / metodo che data una stringa in input ne stampi le sole vocali.
+ * 	Per esempio, se si immette la stringa "Viva Java", il programma stampa "iaaa".
+ */
+	public static void funct2(String str) {
+		
+		for(int i = 0; i < str.length(); i++) {
+			switch(str.charAt(i)) {
+			case 'a':
+			case 'i':
+			case 'u':
+			case 'e':
+			case 'o':
+				System.out.print(str.charAt(i));
+				break;
+			}
+		}
+	}
+	
+	
+/*
+ * 	Scrivere un programma / metodo che data una sequenza di stringhe, conclusa dalla stringa vuota, 
+ * 	stampi la somma delle lunghezze delle stringhe che iniziano con una lettera maiuscola.
+ * 	Per esempio, se si immettono le stringhe "Albero", "foglia", "Radici", "Ramo",
+ * 	"fiore" (e poi "" per finire), il programma stampa 16. 
+ */
+	public static void funct3() {
+		int conta = 0;
+		String[] str = {"Albero", "foglia", "Radici", "Ramo", "fiore", ""};
+		
+		int i = 0;
+		while(!str[i].equals("")) {
+			if(str[i].matches("[A-Z].*"))
+				conta = conta + str[i].length();
+			i++;
+		}
+		
+		System.out.print(conta);
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		String str = "Viva Java";
+		
+	//	funct1(str);
+	//	funct2(str);
+		funct3();
+
+	}
+
+}

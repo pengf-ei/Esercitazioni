@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;intero&apos; in &apos;Cicli.funct3()&apos; to &apos;insert&apos;&#x0D;&#x0A;- Original project: &apos;Cicli_1.3&apos;&#x0D;&#x0A;- Original element: &apos;Cicli.funct3().intero&apos;&#x0D;&#x0A;- Renamed element: &apos;intero&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;intero&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{Cicli.java[Cicli~funct3@intero!1582!1621!1590!1595!QScanner;!0!false" name="insert" references="true" stamp="1612879330280" version="1.0"/>
+</session>
