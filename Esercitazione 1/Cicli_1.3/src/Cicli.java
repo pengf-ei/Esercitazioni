@@ -8,19 +8,22 @@ public class Cicli {
  * 	Risolvere questo esercizio senza usare array.
  */
 	public static void funct1(int... interi) {
-		boolean verifica = true;
-		
-		for(int x : interi) {
-			if(!(x >=0 && (x % 2 == 0))) {
-				verifica = false;
-				break;
+		if(interi != null) {
+			boolean verifica = true;
+			
+			for(int x : interi) {
+				if(!(x >=0 && (x % 2 == 0))) {
+					verifica = false;
+					break;
+				}
 			}
-		}
-		
-		if(verifica == false)
-			System.out.print("NO");
-		else
-			System.out.print("Tutti positivi e pari");
+			
+			if(verifica == false)
+				System.out.println("NO");
+			else
+				System.out.println("Tutti positivi e pari");
+		} else
+			System.out.println("Valori null");
 
 	}
 	
@@ -32,17 +35,20 @@ public class Cicli {
  *	il risultato stampato dovr¨¤ essere 9. Risolvere questo esercizio senza usare array. 
  */
 	public static void funct2(int... interi) {
-		int sum = 0;
-		int nDivisibili = 0;
-		
-		for(int n : interi) {
-			if(n % 3 == 0) {
-				nDivisibili++;
-				sum += n;
+		if(interi != null) {
+			int sum = 0;
+			int nDivisibili = 0;
+			
+			for(int n : interi) {
+				if(n % 3 == 0) {
+					nDivisibili++;
+					sum += n;
+				}
 			}
-		}
-		
-		System.out.print((float)sum/nDivisibili);
+			
+			System.out.println((float)sum/nDivisibili);
+		} else
+			System.out.println("Valori null");
 	}
 	
 	
@@ -78,8 +84,8 @@ public class Cicli {
 	
 	public static void main(String[] args) {
 		
-	//	funct1(4,6,8,10,100,120);
-	//	funct2(5,8,9,12,7,6,1,3,1,9,24);
+		funct1(2, 3, -1, 5, 8, 9, 10, 4, 6);
+		funct2(5, 8, 9, 12, 7, 6 ,1);
 		
 		funct3();
 

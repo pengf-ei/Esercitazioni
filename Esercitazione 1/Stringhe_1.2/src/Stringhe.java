@@ -6,11 +6,12 @@ public class Stringhe {
  * 	Per esempio, se si immette la stringa "Viva Java", il programma stampa "avaJ aviV"
  */
 	public static void funct1(String str) {
-		
-		for(int i = str.length() -1; i >= 0; i--) {
-			System.out.print(str.charAt(i));
-		}
-		
+		if(str != null) {
+			for(int i = str.length() -1; i >= 0; i--) {
+				System.out.print(str.charAt(i));
+			}
+		} else
+			System.out.println("Stringa null");
 	}
 
 	
@@ -19,18 +20,20 @@ public class Stringhe {
  * 	Per esempio, se si immette la stringa "Viva Java", il programma stampa "iaaa".
  */
 	public static void funct2(String str) {
-		
-		for(int i = 0; i < str.length(); i++) {
-			switch(str.charAt(i)) {
-			case 'a':
-			case 'i':
-			case 'u':
-			case 'e':
-			case 'o':
-				System.out.print(str.charAt(i));
-				break;
+		if(str != null) {
+			for(int i = 0; i < str.length(); i++) {
+				switch(str.charAt(i)) {
+				case 'a':
+				case 'i':
+				case 'u':
+				case 'e':
+				case 'o':
+					System.out.print(str.charAt(i));
+					break;
+				}
 			}
-		}
+		} else 
+			System.out.println("Stringa null");
 	}
 	
 	
@@ -59,8 +62,8 @@ public class Stringhe {
 	public static void main(String[] args) {
 		String str = "Viva Java";
 		
-		funct1(str);
-		funct2(str);
+		funct1(null);
+		funct2(null);
 		funct3();
 
 	}
