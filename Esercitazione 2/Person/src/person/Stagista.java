@@ -11,7 +11,6 @@ public class Stagista extends Person {
 		
 	}
 	
-	
 	public Stagista(String name, String surname, String tax_code, String city, int numberOfPresence, String idNumber) {
 		super(name, surname, tax_code, city);
 		this.numberOfPresence = numberOfPresence;

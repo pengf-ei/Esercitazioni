@@ -31,7 +31,6 @@ public class Person {
 		Calendar c = Calendar.getInstance();
 		int currYear = c.get(Calendar.YEAR);
 		
-		
 		if(tax_code != null) {
 			String subYear = tax_code.substring(6, 8);
 			int year = Integer.parseInt(subYear);
