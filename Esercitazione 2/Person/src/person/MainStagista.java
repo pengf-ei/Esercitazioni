@@ -23,12 +23,13 @@ public class MainStagista {
 			return false;
 
 	}
+	
 
 	public static void main(String[] args) {
 		Stagista[] stg = new Stagista[3];
 		
 		stg[0] = new Stagista("Mario","Super","MARSUP95B19Z210Q","Brooklyn", 200, "MR_STAGE_1");
-		stg[1] = new Stagista("Luigi","Super","LUISUP99B19Z210Q","Tokyo", 230, "MR_STAGE_2");
+		stg[1] = new Stagista("Luigi","Super","LUISUP00B19Z210Q","Tokyo", 230, "MR_STAGE_2");
 		stg[2] = new Stagista("Yoshi","Super","YOSSUP90B19Z210Q","New York", 103, "MR_STAGE_3");
 			
 		boolean check = ordineDecrescente(stg);

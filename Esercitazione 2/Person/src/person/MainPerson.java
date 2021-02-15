@@ -3,6 +3,7 @@ package person;
 public class MainPerson {
 
 	public static void main(String[] args) {
+
 		
 		Person persona = new Person("Mario","Super","MARSUP99B19Z210Q","Brooklyn");
 		

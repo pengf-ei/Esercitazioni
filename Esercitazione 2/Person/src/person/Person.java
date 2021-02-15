@@ -1,6 +1,6 @@
 package person;
 
-import java.util.Date;
+import java.util.Calendar;
 
 public class Person {
 	private String name;
@@ -28,8 +28,9 @@ public class Person {
 	}
 	
 	public int bornYear() {
-		Date d = new Date();
-		int currYear = d.getYear();
+		Calendar c = Calendar.getInstance();
+		int currYear = c.get(Calendar.YEAR);
+		
 		
 		if(tax_code != null) {
 			String subYear = tax_code.substring(6, 8);
