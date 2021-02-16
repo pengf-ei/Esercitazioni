@@ -1,6 +1,6 @@
 package person;
 
-public class MainEmployee {
+public class TestEmployee {
 
 	public static void main(String[] args) {
 		Employee[] emp = new Employee[3];
