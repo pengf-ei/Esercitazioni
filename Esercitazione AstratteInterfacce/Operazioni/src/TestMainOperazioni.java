@@ -9,7 +9,7 @@ public class TestMainOperazioni {
 
 	public static void main(String[] args) {
 		Operando op1 = new Operando(2);
-		Operando op2 = new Operando(3);
+		Operando op2 = new Operando(-1);
 		
 		Addizione add = new Addizione();
 		
@@ -29,4 +29,5 @@ public class TestMainOperazioni {
 	}
 
 }
+
 
