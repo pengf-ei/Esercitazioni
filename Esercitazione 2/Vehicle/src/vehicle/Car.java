@@ -13,7 +13,8 @@ public class Car extends Vehicle {
 	}
 
 	public void setTipologia(String tipologia) {
-		this.tipologia = tipologia;
+		if(tipologia != null)
+			this.tipologia = tipologia;
 	}
 	
 	

@@ -13,7 +13,8 @@ public class Motocycle extends Vehicle {
 	}
 
 	public void setCilindrata(int cilindrata) {
-		this.cilindrata = cilindrata;
+		if(cilindrata > 0)
+			this.cilindrata = cilindrata;
 	}
 	
 	

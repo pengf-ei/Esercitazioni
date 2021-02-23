@@ -20,18 +20,20 @@ public class Person {
 		this.surname = surname;
 		this.city = city;
 		
-		if(tax_code.matches("^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]$"))
-			this.tax_code = tax_code;
+		if(tax_code != null)
+			if(tax_code.matches("^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]$"))
+				this.tax_code = tax_code;
 		else
 			this.tax_code = null;
 		
 	}
 	
 	public int bornYear() {
-		Calendar c = Calendar.getInstance();
-		int currYear = c.get(Calendar.YEAR);
-		
+			
 		if(tax_code != null) {
+			Calendar c = Calendar.getInstance();
+			int currYear = c.get(Calendar.YEAR);
+			
 			String subYear = tax_code.substring(6, 8);
 			int year = Integer.parseInt(subYear);
 			
@@ -61,19 +63,24 @@ public class Person {
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		if(name != null)
+			this.name = name;
 	}
 
 	public void setSurname(String surname) {
-		this.surname = surname;
+		if(surname != null)
+			this.surname = surname;
 	}
 
 	public void setTax_code(String tax_code) {
-		this.tax_code = tax_code;
+		if(tax_code != null)
+			if(tax_code.matches("^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]$"))
+				this.tax_code = tax_code;
 	}
 
 	public void setCity(String city) {
-		this.city = city;
+		if(city != null)
+			this.city = city;
 	}
 	
 	

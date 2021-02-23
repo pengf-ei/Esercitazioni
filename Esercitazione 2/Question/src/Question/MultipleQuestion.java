@@ -22,7 +22,7 @@ public class MultipleQuestion extends Question {
 		} else
 			super.setRisposta(null);
 		
-	//	this.rispostaCorretta = rispostaCorretta;
+
 	}
 	
 	public void setRisposta(int[] risposte) {
@@ -44,22 +44,26 @@ public class MultipleQuestion extends Question {
 	}
 	
 	public int ask(String r) {
-		int risposta = Integer.parseInt(r);
-		
-		if(this.getRisposta() != null) {
-			String [] str = this.getRisposta().split(";");
-			
-			if(risposta >= 1 && risposta <= str.length) {
+		if(r != null) {
+			if(r.matches("\\d")) {
+				int risposta = Integer.parseInt(r);
 				
-				int [] ind = new int[str.length];
-				
-				for(int j = 0; j < ind.length; j++) {
-					ind[j] = Integer.parseInt(str[j]);
+				if(this.getRisposta() != null) {
+					String [] str = this.getRisposta().split(";");
+					
+					if(risposta >= 1 && risposta <= str.length) {
+						
+						int [] ind = new int[str.length];
+						
+						for(int j = 0; j < ind.length; j++) {
+							ind[j] = Integer.parseInt(str[j]);
+						}
+						
+						if(ind[risposta-1] == rispostaCorretta)
+							return this.getPunteggio();
+						
+					}
 				}
-				
-				if(ind[risposta-1] == rispostaCorretta)
-					return this.getPunteggio();
-				
 			}
 		}
 			

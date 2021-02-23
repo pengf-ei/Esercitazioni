@@ -26,6 +26,8 @@ public class MainStagista {
 		System.out.println("ID Stage: " + stg[maxId].getIdNumber());
 		System.out.println("Anno di Nascita: " + stg[maxId].bornYear());
 		
+		
 	}
 
 }
+

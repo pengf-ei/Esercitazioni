@@ -25,11 +25,13 @@ public class Employee extends Person {
 	}
 
 	public void setAnnoAssunzione(int annoAssunzione) {
-		this.annoAssunzione = annoAssunzione;
+		if(annoAssunzione > 1900)
+			this.annoAssunzione = annoAssunzione;
 	}
 
 	public void setStipendio(int stipendio) {
-		this.stipendio = stipendio;
+		if(stipendio > 0)
+			this.stipendio = stipendio;
 	}
 
 	public void visualize() {

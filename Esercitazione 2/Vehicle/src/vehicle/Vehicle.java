@@ -31,15 +31,18 @@ public class Vehicle {
 	}
 
 	public void setTarga(String targa) {
-		this.targa = targa;
+		if(targa != null)
+			this.targa = targa;
 	}
 
 	public void setMarca(String marca) {
-		this.marca = marca;
+		if(targa != null)
+			this.marca = marca;
 	}
 
 	public void setModello(String modello) {
-		this.modello = modello;
+		if(modello != null)
+			this.modello = modello;
 	}
 
 	public void setGuasto(boolean isGuasto) {

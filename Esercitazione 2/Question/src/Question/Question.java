@@ -3,13 +3,14 @@ package Question;
 public class Question {
 	private String domanda;
 	private String risposta;
-	private int punteggio;
+	private int punteggio = 0;
 	
 	public Question(String domanda, String risposta, int punteggio) {
 		super();
 		this.domanda = domanda;
 		this.risposta = risposta;
-		this.punteggio = punteggio;
+		if(punteggio > 0)
+			this.punteggio = punteggio;
 	}
 
 	public Question(String domanda, int punteggio) {

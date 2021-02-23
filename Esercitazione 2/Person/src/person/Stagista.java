@@ -27,11 +27,13 @@ public class Stagista extends Person {
 	}
 
 	public void setNumberOfPresence(int numberOfPresence) {
-		this.numberOfPresence = numberOfPresence;
+		if(numberOfPresence >= 0)
+			this.numberOfPresence = numberOfPresence;
 	}
 
 	public void setIdNumber(String idNumber) {
-		this.idNumber = idNumber;
+		if(idNumber != null)
+			this.idNumber = idNumber;
 	}
 	
 	

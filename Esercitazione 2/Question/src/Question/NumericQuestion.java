@@ -7,10 +7,17 @@ public class NumericQuestion extends Question {
 	}
 
 	public int ask(String risposta) {
-		if(risposta != null && Integer.parseInt(risposta) == Integer.parseInt(this.getRisposta()))
-			return this.getPunteggio();
-		else 
-			return 0;
+		if(risposta != null) {
+			
+			if(risposta.matches("[+-]?\\d+")) {
+				int seInt = Integer.parseInt(risposta);
+				if(seInt >= 0 || seInt < 0 ) {
+					if(seInt == Integer.parseInt(this.getRisposta()))
+					return this.getPunteggio();
+					}
+			}
+		}
+		return 0;
 	}
 	
 	
