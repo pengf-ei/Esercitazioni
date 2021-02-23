@@ -13,7 +13,7 @@ public class Divisione extends MetodiComuni implements Operazione {
 
 	@Override
 	public void esegui(Object obj, Object obt) {
-		if(((Operando) obt).getOp() > 0)
+		if(((Operando) obt).getOp() != 0)
 			this.ris = ((Operando) obj).getOp() / ((Operando) obt).getOp();
 
 	}
