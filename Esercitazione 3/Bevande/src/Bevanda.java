@@ -2,13 +2,14 @@
 public class Bevanda {
 	
 	private String name;
-	private double price;
+	private double price = -1;
 	private String descrizione;
 
 	public Bevanda(String name, double price) {
 		super();
 		this.name = name;
-		this.price = price;
+		if(price > 0)
+			this.price = price;
 	}
 	
 	public String getDescrizione() {
