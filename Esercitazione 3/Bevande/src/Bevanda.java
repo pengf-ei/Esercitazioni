@@ -12,17 +12,13 @@ public class Bevanda {
 			this.price = price;
 	}
 	
-	public String getDescrizione() {
+	public String descrizioneBevanda() {
 		return descrizione;
-	}
-
-	public void setDescrizione(String descrizione) {
-		if(descrizione != null)
-			this.descrizione = descrizione;
 	}
 	
 	public void aggiungiBevanda(String descrizione) {
-		this.setDescrizione(descrizione);		
+		if(descrizione != null)
+			this.descrizione = descrizione;	
 	}
 
 	public String getName() {
