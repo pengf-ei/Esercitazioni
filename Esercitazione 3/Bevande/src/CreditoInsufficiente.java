@@ -1,20 +1,19 @@
-// Esercizio 1: Tipi di Bevande
 
-public class BevandaNonValida extends NullPointerException {
+public class CreditoInsufficiente extends Exception {
+
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public BevandaNonValida() {
+	public CreditoInsufficiente() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public BevandaNonValida(String message) {
+	public CreditoInsufficiente(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}
-
 
 }

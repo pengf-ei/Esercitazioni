@@ -1,3 +1,5 @@
+// Esercizio 1: Tipi di Bevande
+
 
 public class Bevanda {
 	
@@ -12,14 +14,17 @@ public class Bevanda {
 			this.price = price;
 	}
 	
-	public String descrizioneBevanda() {
+
+
+	public String getDescrizione() {
 		return descrizione;
 	}
-	
-	public void aggiungiBevanda(String descrizione) {
+
+	public void setDescrizione(String descrizione) {
 		if(descrizione != null)
-			this.descrizione = descrizione;	
+			this.descrizione = descrizione;
 	}
+
 
 	public String getName() {
 		return name;
